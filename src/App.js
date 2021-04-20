@@ -16,6 +16,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
+        <h5>how to access array element in react using map</h5>
         <ul>
           {
             heros.map(hero => <li>{hero}</li>)
@@ -24,11 +26,13 @@ function App() {
 
         <Product name={products[0].name} price={products[0].price}></Product>
 
+          {/* passing whole object */}
         <Product2 product={products[0]}></Product2>
 
         <Product3 product={products[0]}></Product3>
         <Product3 product={products[1]}></Product3>
 
+        <h5>Accessing array of objects using map</h5>
         {
           products.map(pd => <Product4 product={pd}></Product4>)
         }
@@ -86,7 +90,7 @@ function Product3(props) {
     width: '200px',
     float: 'left'
   }
-  const { name, price } = props.product;
+  const { name, price } = props.product; // destructuring object
   // console.log(name, price);
   return (
     <div style={productStyle}>
